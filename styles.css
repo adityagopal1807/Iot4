@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8e3e6; /* Light pink background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px; /* Center the quiz */
+    margin: 0 auto;
+    background-color: #fff; /* White background for the quiz */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #e74c3c; /* Red color for the heading */
+}
+
+.question {
+    margin: 15px 0;
+    border-bottom: 1px solid #ddd; /* Divider between questions */
+    padding-bottom: 10px;
+}
+
+label {
+    display: block; /* Stack radio buttons vertically */
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and text */
+}
+
+button {
+    background-color: #e74c3c; /* Red background for the button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #e74c3c; /* Red border for results */
+    border-radius: 5px;
+    background-color: #fff;
+}
