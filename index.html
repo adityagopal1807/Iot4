@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Mock Test For IOT!</h1>
+        <h1 class="title">Mock Test of IOT!</h1>
         <form id="quizForm">
             <!-- Easy Level Questions -->
             <h2>Easy Level</h2>
@@ -108,6 +108,7 @@
             </div>
             <div class="question">
                 <p>14. What is the purpose of Timer 0 in the 8051 microcontroller?</p>
+                <label><input type="radio" name="q14" value="a"> a) Counting external events</label>
                 <label><input type="radio" name="q14" value="b"> b) Managing serial communication</label>
                 <label><input type="radio" name="q14" value="c"> c) Generating interrupts</label>
                 <label><input type="radio" name="q14" value="d"> d) Resetting the microcontroller</label>
@@ -207,17 +208,18 @@
                 <label><input type="radio" name="q27" value="d"> d) Using RST (Reset)</label>
             </div>
             <div class="question">
-    <p>28. What is the default stack pointer address in the 8051 microcontroller?</p>
-    <label><input type="radio" name="q8" value="a"> a) 00H</label>
-    <label><input type="radio" name="q8" value="b"> b) 07H</label>
-    <label><input type="radio" name="q8" value="c"> c) 08H</label>
-    <label><input type="radio" name="q8" value="d"> d) 0FH</label>
+                <p>28. What is the default stack pointer address in the 8051 microcontroller?</p>
+            
+                <label><input type="radio" name="q28" value="a"> a) 00H</label>
+                <label><input type="radio" name="q28" value="b"> b) 07H</label>
+                <label><input type="radio" name="q28" value="c"> c) 08H</label>
+                <label><input type="radio" name="q28" value="d"> d) 0FH</label>
             </div>
             <div class="question">
                 <p>29. Which of the following timers is used for generating baud rate in the 8051 microcontroller?</p>
-            
-                <label><input type="radio" name="q29" value="a"> a) Timer 0</label>
+               <label><input type="radio" name="q29" value="a"> a) Timer 0</label>
                 <label><input type="radio" name="q29" value="b"> b) Timer 1</label>
+            
                 <label><input type="radio" name="q29" value="c"> c) Timer 2</label>
                 <label><input type="radio" name="q29" value="d"> d) Timer 3</label>
             </div>
@@ -225,10 +227,11 @@
                 <p>30. What is the size of the address bus in the 8051 microcontroller?</p>
                 <label><input type="radio" name="q30" value="a"> a) 8 bits</label>
                 <label><input type="radio" name="q30" value="b"> b) 16 bits</label>
+                
                 <label><input type="radio" name="q30" value="c"> c) 32 bits</label>
                 <label><input type="radio" name="q30" value="d"> d) 64 bits</label>
             </div>
-            <button type="button" onclick="submitQuiz()">Hope You Love The Developer 💛</button>
+            <button type="button" onclick="submitQuiz()">Developer loves you!❤️</button>
         </form>
         <div id="result"></div>
     </div>
@@ -266,7 +269,7 @@
         questionDiv.appendChild(feedbackDiv);
     }
 
-    alert(`I Love You❤️, Your total score is: ${score} out of 30`);
+    alert(`Total Scored by queen 👑 is: ${score} out of 30`);
     const loveMessage = `<p>💖 A love message for you, my dear! You are my sunshine! 💖</p>`;
     document.getElementById('result').innerHTML = loveMessage;
 }
