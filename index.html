@@ -233,36 +233,42 @@
     </div>
     <script>
         function submitQuiz() {
-            const answers = {
-                q1: 'b', q2: 'c', q3: 'b', q4: 'b', q5: 'b', q6: 'a', q7: 'a', q8: 'a', q9: 'b', q10: 'b',
-                q11: 'd', q12: 'b', q13: 'a', q14: 'a', q15: 'c', q16: 'a', q17: 'b', q18: 'a', q19: 'b', q20: 'c',
-                q21: 'a', q22: 'a', q23: 'c', q24: 'a', q25: 'b', q26: 'a', q27: 'a', q28: 'b', q29: 'b', q30: 'b'
-            };
+    const answers = {
+        q1: 'b', q2: 'c', q3: 'b', q4: 'b', q5: 'b', q6: 'a', q7: 'a', q8: 'a', q9: 'b', q10: 'b',
+        q11: 'd', q12: 'b', q13: 'a', q14: 'a', q15: 'c', q16: 'a', q17: 'b', q18: 'a', q19: 'b', q20: 'c',
+        q21: 'a', q22: 'a', q23: 'c', q24: 'a', q25: 'b', q26: 'a', q27: 'a', q28: 'b', q29: 'b', q30: 'b'
+    };
 
-            let score = 0;
-            let output = '';
+    let score = 0;
 
-            for (let i = 1; i <= 30; i++) {
-                const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
-                const correctAnswer = answers[`q${i}`];
-                
-                output += `<p>Question ${i}: `;
-                if (userAnswer) {
-                    const userValue = userAnswer.value;
-                    output += userValue === correctAnswer ? 'Correct!' : `Incorrect! Correct answer: ${correctAnswer}`;
-                    if (userValue === correctAnswer) {
-                        score++;
-                    }
-                } else {
-                    output += 'No answer provided.';
-                }
-                output += `</p>`;
+    for (let i = 1; i <= 30; i++) {
+        const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+        const correctAnswer = answers[`q${i}`];
+        
+        const questionDiv = document.querySelector(`.question:nth-of-type(${i})`);
+        let feedback = `<p>Question ${i}: `;
+
+        if (userAnswer) {
+            const userValue = userAnswer.value;
+            feedback += userValue === correctAnswer ? 'Correct!' : `Incorrect! Correct answer: ${correctAnswer}`;
+            if (userValue === correctAnswer) {
+                score++;
             }
-
-            alert(`Your total score is: ${score} out of 30`);
-            output += `<p>💖 A love message for you, my dear! You are my sunshine! 💖</p>`;
-            document.getElementById('result').innerHTML = output;
+        } else {
+            feedback += 'No answer provided.';
         }
+        feedback += `</p>`;
+
+        // Append feedback below the current question
+        const feedbackDiv = document.createElement('div');
+        feedbackDiv.innerHTML = feedback;
+        questionDiv.appendChild(feedbackDiv);
+    }
+
+    alert(`Your total score is: ${score} out of 30`);
+    const loveMessage = `<p>💖 A love message for you, my dear! You are my sunshine! 💖</p>`;
+    document.getElementById('result').innerHTML = loveMessage;
+}
     </script>
 </body>
 </html>
